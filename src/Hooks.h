@@ -150,8 +150,8 @@ namespace ModernStaggerLock
 			SKSE::AllocTrampoline(1 << 4);
 			auto& trampoline = SKSE::GetTrampoline();
 
-			REL::Relocation<std::uintptr_t> callerFunc{ REL::ID(36507) };  //1.5.97 1405E4880
-			_PerformAction = trampoline.write_call<5>(callerFunc.address() + 0X89D, PerformLandAction);
+			REL::Relocation<std::uintptr_t> callerFunc{ REL::RelocationID(36507, 37507) };  //1.5.97 1405E4880
+			_PerformAction = trampoline.write_call<5>(callerFunc.address() + REL::Relocate(0x89D, 0x9BB), PerformLandAction);
 			INFO("{} Done!", __FUNCTION__);
 		}
 
@@ -169,8 +169,8 @@ namespace ModernStaggerLock
 			SKSE::AllocTrampoline(1 << 4);
 			auto& trampoline = SKSE::GetTrampoline();
 
-			REL::Relocation<std::uintptr_t> callerFunc{ REL::ID(41271) };  //1.5.97 140705530
-			_PerformAction = trampoline.write_call<5>(callerFunc.address() + 0x241, PerformLandAction);
+			REL::Relocation<std::uintptr_t> callerFunc{ REL::RelocationID(41271, 42350) };  //1.5.97 140705530
+			_PerformAction = trampoline.write_call<5>(callerFunc.address() + REL::Relocate(0x241, 0x179), PerformLandAction);
 			INFO("{} Done!", __FUNCTION__);
 		}
 
