@@ -3,7 +3,14 @@
   "version-string": "1.0.0",
   "description": "Modern Stagger Lock",
   "license": "MIT",
-  "dependencies": ["spdlog"],
+  "dependencies": [
+    "spdlog",
+    "rsm-binary-io",
+    "nlohmann-json",
+    "rapidcsv",
+    "simpleini",
+    "xbyak"
+],
   "features": {
     "mo2-install": {
       "description": "Modern Stagger Lock"
