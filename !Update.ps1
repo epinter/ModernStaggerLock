@@ -2,7 +2,7 @@
 
 # args
 param (
-    [Parameter(Mandatory)][ValidateSet('COPY', 'SOURCEGEN', 'DISTRIBUTE')][string]$Mode,
+    [Parameter(Mandatory)][ValidateSet('SOURCEGEN')][string]$Mode,
     [string]$Version,
     [string]$Path,
     [string]$Project
